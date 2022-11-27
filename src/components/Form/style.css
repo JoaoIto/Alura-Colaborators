@@ -1,0 +1,36 @@
+.container{
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.container label {
+    font-size: 25px;
+    font-family: "Inter", sans-serif;
+}
+
+.container input{
+    font-size: 1.6rem;
+    height: 60px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 80%;
+    border: none;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.08);
+}
+
+.container input::placeholder{
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+}
