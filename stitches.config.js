@@ -16,6 +16,7 @@ export const {
       gray400: "gainsboro",
       gray500: "lightgray",
       aquaWhite: "#F7F7F7",
+      blue400: "#6278F7",
     },
     fonts: {
       Poppins: '"Poppins", "sans-serif"',

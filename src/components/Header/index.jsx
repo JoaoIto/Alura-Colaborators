@@ -15,7 +15,7 @@ export function Header() {
 
 const Background = styled("header", {
   height: "600px",
-  backgroundColor: "#6278F7",
+  backgroundColor: "$blue400",
   color: "#fff",
   display: "flex",
   alignItems: "center",
