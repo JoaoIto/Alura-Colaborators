@@ -1,14 +1,15 @@
+import { useState } from "react";
+
 export function Input(props){
-    let value = '';
+
     const typing = (event) => {
-        value = event.target.value;
-        console.log(value)
+        props.onChanges(event.target.value)
     }
 
     return(
         <div className="container">
             <label>{props.label}</label>
-            <input value={value} onChange={typing} required={props.required} type={props.type} placeholder={props.placeholder}/>
+            <input value={props.value} onChange={typing} required={props.required} type={props.type} placeholder={props.placeholder}/>
         </div>
     )
 }

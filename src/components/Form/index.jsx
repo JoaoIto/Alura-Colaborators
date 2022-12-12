@@ -2,6 +2,7 @@ import { styled } from "../../../stitches.config";
 import { Input } from "./Input";
 import { List } from "../List";
 import style from "./style.css";
+import { useState } from "react";
 
 export function Form(props) {
 
@@ -12,52 +13,65 @@ export function Form(props) {
     "Devops",
     "UX e design",
     "Mobile",
-
-
-
-
-
     "Inovação e Gestão"
   ]
 
+  const [name, setName] = useState('');
+  const [office, setOffice] = useState('');
+  const [image, setImage] = useState('');
+  const [group, setGroup] = useState('');
+
   const onSave = (event) => {
     event.preventDefault();
-    console.log("click")
+    props.signInColaborator({
+      name,
+      office,
+      image,
+      group,
+    });
   }
 
   return (
     <>
-    <Card>
-      <form onSubmit={onSave}>
-        <Input 
-        type="text" 
-        label="Nome" 
-        placeholder="Digite o seu nome: " 
-        required
-        />
-        
-        <Input 
-        type="text" 
-        label="Cargo" 
-        placeholder="Digite o seu cargo: " 
-        required
-        />
+      <Card>
+        <form onSubmit={onSave}>
+          <Input
+            type="text"
+            label="Nome"
+            placeholder="Digite o seu nome: "
+            value={name}
+            onChanges={value => setName(value)}
+            required
+          />
 
-        <Input
-          type="text"
-          label="Foto"
-          placeholder="Coloque a url da sua foto: "
-        />
+          <Input
+            type="text"
+            label="Cargo"
+            placeholder="Digite o seu cargo: "
+            value={office}
+            onChanges={value => setOffice(value)}
+            required
+          />
 
-        <List
-        label="Times"
-        itens={times}
-        required
-        />
+          <Input
+            type="text"
+            label="Foto"
+            placeholder="Coloque a url da sua foto: "
+            value={image}
+            onChanges={value => setImage(value)}
+          />
 
-        <Button>Criar Card</Button>
-      </form>
-    </Card>
+          <List 
+          label="Times" 
+          itens={times} 
+          required 
+          value={group}
+          onChanges={value => setGroup(value)}
+          />
+          
+          <Button>Criar Card</Button>
+        </form>
+      </Card>
     </>
   );
 }
