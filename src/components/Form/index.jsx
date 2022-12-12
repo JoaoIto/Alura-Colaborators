@@ -1,23 +1,46 @@
-import { fontSize } from "@mui/system";
 import { styled } from "../../../stitches.config";
 import { Input } from "./Input";
+import { List } from "../List";
 import style from "./style.css";
 
 export function Form(props) {
+
+  const times = [
+    "Programação",
+    "Front-End",
+    "Data-Science",
+    "Devops",
+    "UX e design",
+    "Mobile",
+
+
+
+
+
+    "Inovação e Gestão"
+  ]
+
+  const onSave = (event) => {
+    event.preventDefault();
+    console.log("click")
+  }
+
   return (
     <>
     <Card>
-      <form action="">
+      <form onSubmit={onSave}>
         <Input 
         type="text" 
         label="Nome" 
         placeholder="Digite o seu nome: " 
+        required
         />
         
         <Input 
         type="text" 
         label="Cargo" 
         placeholder="Digite o seu cargo: " 
+        required
         />
 
         <Input
@@ -26,14 +49,13 @@ export function Form(props) {
           placeholder="Coloque a url da sua foto: "
         />
 
-        <Input
-        type="text" 
-        label="Cargo"
-        placeholder="Escolha aqui seu cargo:"
-        option={props.option}
+        <List
+        label="Times"
+        itens={times}
+        required
         />
 
-        <Button type>Criar Card</Button>
+        <Button>Criar Card</Button>
       </form>
     </Card>
     </>
