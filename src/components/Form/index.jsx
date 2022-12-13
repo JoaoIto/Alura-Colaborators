@@ -82,7 +82,7 @@ const Card = styled("fieldset", {
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  justifyContent: "space-around",
+  justifyContent: "space-evenly",
   backgroundColor: "$aquaWhite",
   boxShadow: "8px 8px 15px rgba(0, 0, 0, 0.2)",
   border: "5px solid rgba(0, 0, 0, 0.08)",
