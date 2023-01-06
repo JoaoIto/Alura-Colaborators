@@ -1,6 +1,5 @@
 main{
     width: 100vw;
-    height: 180vh;
     display: flex;
     flex-direction: column;
     align-items: center;

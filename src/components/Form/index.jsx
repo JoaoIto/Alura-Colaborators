@@ -79,6 +79,7 @@ export function Form(props) {
 const Card = styled("fieldset", {
   height: "800px",
   width: "80vw",
+  maxWidth: "1200px",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",

@@ -1,20 +1,68 @@
 import { styled } from "../../../stitches.config";
 import style from "./style.css";
-import { Group } from "../Group"
+import { Group } from "../Group";
+import { Dev } from "../Dev";
 
-export function Main(props){
-    return (
-      <main>
-        <Title>Minha Organização: </Title>
-        <Group name="Programação" />
-        <Group name="Front_End" />
-        <Group name="Data-Science" />
-        <Group name="Devops" />
-        <Group name="UX e Design" />
-        <Group name="Mobile" />
-        <Group name="Inovação e Gestão" />
-      </main>
-    );
+
+export function Main(props) {
+
+  const times = [
+    {
+      name: "Programação",
+      primaryColor: "#D9F7E9",
+      secondColor: "#57C278",
+    },
+
+    {
+      name: "Front-End",
+      primaryColor: "#E8F8FF",
+      secondColor: "#82CFFA",
+    },
+
+    {
+      name: "Data-Science",
+      primaryColor: "#F0F8E2",
+      secondColor: "#A6D157",
+    },
+
+    {
+      name: "Devops",
+      primaryColor: "#FDE7E8",
+      secondColor: "#E06B69",
+    },
+
+    {
+      name: "UX e design",
+      primaryColor: "#FAE9F5",
+      secondColor: "#DB6EBF",
+    },
+
+    {
+      name: "Mobile",
+      primaryColor: "#FFF5D9",
+      secondColor: "#FFBA05",
+    },
+
+    {
+      name: "Inovação e Gestão",
+      primaryColor: "#FFEEDF",
+      secondColor: "#FF8A29",
+    },
+  ];
+
+  return (
+    <main>
+      <Title>Minha Organização: </Title>
+      {times.map((time) => (
+        <Group
+          key={time.name}
+          name={time.name}
+          primaryColor={time.primaryColor}
+          secondColor={time.secondColor}
+        />
+      ))}
+    </main>
+  );
 }
 
 const Title = styled("h2", {
@@ -22,4 +70,5 @@ const Title = styled("h2", {
   fontFamily: "$Inter",
   fontWeight: "normal",
   color: "$blue400",
+  margin: "100px 0",
 });

@@ -1,22 +1,22 @@
-import { height } from "@mui/system";
 import { styled } from "../../../stitches.config";
+import { Dev } from "../Dev";
 
 export function Group(props){
     return (
-      <>
-        <Section>
+        <Section style={{ backgroundColor: props.primaryColor }}>
           <TitleCard>{props.name}</TitleCard>
-          <Container><Card></Card></Container>
+          <Dev />
         </Section>
-      </>
     );
 }
 
 const Section = styled("section", {
-  width: "80%",
-  height: "150vh",
+  width: "100vw",
+  height: "50vh",
   display: "flex",
-  justifyContent: "space-between",
+  flexDirection: "column",
+  justifyContent: "space-around",
+  alignItems: "center",
 });
 
 const TitleCard = styled("h3", {
@@ -26,8 +26,3 @@ const TitleCard = styled("h3", {
   alignSelf: "center",
   textAlign: "center",
 });
-
-const Container = styled("div", {
-    width: "80%",
-    height: "20%", 
-})

@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Form signInColaborator={(colaborator) => newColaborator(colaborator)} />
+      <Form signInColaborator={colaborator => newColaborator(colaborator)} />
       <Main/>
     </div>
   );
