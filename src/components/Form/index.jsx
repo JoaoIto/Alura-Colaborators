@@ -6,16 +6,6 @@ import { useState } from "react";
 
 export function Form(props) {
 
-  const times = [
-    "Programação",
-    "Front-End",
-    "Data-Science",
-    "Devops",
-    "UX e design",
-    "Mobile",
-    "Inovação e Gestão"
-  ]
-
   const [name, setName] = useState('');
   const [office, setOffice] = useState('');
   const [image, setImage] = useState('');
@@ -63,7 +53,7 @@ export function Form(props) {
 
           <List 
           label="Times" 
-          itens={times} 
+          itens={props.times} 
           required 
           value={group}
           onChanges={value => setGroup(value)}

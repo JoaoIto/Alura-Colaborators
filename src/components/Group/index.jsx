@@ -22,7 +22,8 @@ const Section = styled("section", {
 const TitleCard = styled("h3", {
   width: "100vw",
   fontSize: "1.8rem",
-  fontFamily: "$Roboto",
+  fontFamily: "$Inter",
+  fontWeight: "500",
   alignSelf: "center",
   textAlign: "center",
 });
