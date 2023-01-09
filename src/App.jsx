@@ -62,8 +62,11 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Form times={times.map(time => time.name)} signInColaborator={colaborator => newColaborator(colaborator)} />
-      <Main/>
+      <Form
+        times={times.map((time) => time.name)}
+        signInColaborator={(colaborator) => newColaborator(colaborator)}
+      />
+      <Main />
     </div>
   );
 }

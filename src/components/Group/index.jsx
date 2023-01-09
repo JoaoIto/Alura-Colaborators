@@ -1,13 +1,17 @@
 import { styled } from "../../../stitches.config";
 import { Dev } from "../Dev";
 
-export function Group(props){
-    return (
-        <Section style={{ backgroundColor: props.primaryColor }}>
-          <TitleCard>{props.name}</TitleCard>
-          <Dev />
-        </Section>
-    );
+export function Group(props) {
+  return (
+    <Section
+      style={{
+        backgroundColor: props.primaryColor,
+        border: props.secondColor,
+      }}
+    >
+      <TitleCard>{props.name}</TitleCard>
+    </Section>
+  );
 }
 
 const Section = styled("section", {
@@ -17,6 +21,7 @@ const Section = styled("section", {
   flexDirection: "column",
   justifyContent: "space-around",
   alignItems: "center",
+  margin: "20px 0",
 });
 
 const TitleCard = styled("h3", {
