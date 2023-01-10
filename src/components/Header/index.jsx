@@ -4,7 +4,7 @@ export function Header() {
   return (
     <Background>
       <img
-        src="\src\assets\logo.png"
+        src="../src/assets/logo.png"
         alt="Logo da Organo"
       />
       <Title>Pessoas e Times</Title>
