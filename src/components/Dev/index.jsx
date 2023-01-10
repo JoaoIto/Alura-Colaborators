@@ -1,7 +1,7 @@
 import { styled } from "../../../stitches.config";
 import style from "./style.css"
 
-export function Dev(name, image, office, desc) {
+export function Dev({ name, image, office, desc }) {
   return (
     <Devs>
       <img src={image} alt={name} />
