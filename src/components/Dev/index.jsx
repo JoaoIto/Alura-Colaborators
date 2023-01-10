@@ -1,4 +1,3 @@
-import { padding } from "@mui/system";
 import { styled } from "../../../stitches.config";
 
 export function Dev({ name, image, office, secondColor }) {
