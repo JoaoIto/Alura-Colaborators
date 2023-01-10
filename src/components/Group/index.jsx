@@ -10,6 +10,7 @@ export function Group(props) {
       }}
     >
       <TitleCard>{props.name}</TitleCard>
+      <Dev></Dev>
     </Section>
   );
 }

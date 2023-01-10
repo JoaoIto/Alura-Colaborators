@@ -1,12 +1,18 @@
 import reset from "./reset.css";
-import style from "./style.css"
+import style from "./style.css";
 
 import { useState } from "react";
 import { Header } from "./components/Header";
 import { Form } from "./components/Form";
-import { Main } from "./components/Main";
+import { ListTimes } from "./components/ListTimes";
 
 function App() {
+  const [colaborators, setColaborators] = useState([]);
+
+  const newColaborator = (colaborator) => {
+    console.log(colaborator);
+    setColaborators([...colaborators, colaborator]);
+  };
 
   const times = [
     {
@@ -52,13 +58,6 @@ function App() {
     },
   ];
 
-  const [colaborators, setColaborators] = useState([]);
-
-  const newColaborator = (colaborator) => {
-    console.log(colaborator);
-    setColaborators([...colaborators, colaborator]);
-  };
-
   return (
     <div className="App">
       <Header />
@@ -66,7 +65,9 @@ function App() {
         times={times.map((time) => time.name)}
         signInColaborator={(colaborator) => newColaborator(colaborator)}
       />
-      <Main />
+      <ListTimes 
+      colaborators={colaborators} 
+      times={times} />
     </div>
   );
 }
