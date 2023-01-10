@@ -12,16 +12,8 @@ export function ListTimes(props) {
           name={time.name}
           primaryColor={time.primaryColor}
           secondColor={time.secondColor}
-        >
-          {props.colaborators.map((colaborator) => (
-            <Dev
-              name={colaborator.name}
-              office={colaborator.office}
-              desc={colaborator.desc}
-              image={colaborator.image}
-            ></Dev>
-          ))}
-        </Group>
+          colaborators={props.colaborators.filter((colaborator) => colaborator.group === time.name)}
+        />
       ))}
     </main>
   );
