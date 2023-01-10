@@ -10,7 +10,14 @@ export function Group(props) {
       }}
     >
       <TitleCard>{props.name}</TitleCard>
-      <Dev></Dev>
+      {props.colaborators.map((colaborator) => (
+        <Dev
+          key={colaborator.name}
+          {...colaborator}
+          primaryColor={props.primaryColor}
+          secondColor={props.secondColor}
+        />
+      ))}
     </Section>
   );
 }

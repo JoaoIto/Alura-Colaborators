@@ -19,6 +19,11 @@ export function Form(props) {
       image,
       group,
     });
+
+    setName('');
+    setOffice('');
+    setImage('');
+    setGroup('');
   }
 
   return (

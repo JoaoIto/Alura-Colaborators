@@ -5,6 +5,7 @@ export function List(props) {
     <div className="container">
       <label>{props.label}</label>
       <select onChange={event => props.onChanges(event.target.value)} required={props.required} value={props.value}>
+          <option value=""></option>
           {props.itens.map((item) => {
             return <option key={item}>{item}</option>;
           })}
