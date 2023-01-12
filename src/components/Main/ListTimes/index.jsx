@@ -1,4 +1,4 @@
-import { styled } from "../../../stitches.config";
+import { styled } from "../../../../stitches.config";
 import style from "./style.css";
 import { Group } from "../Group";
 

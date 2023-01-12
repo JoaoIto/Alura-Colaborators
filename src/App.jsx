@@ -4,7 +4,7 @@ import style from "./style.css";
 import { useState } from "react";
 import { Header } from "./components/Header";
 import { Form } from "./components/Form";
-import { ListTimes } from "./components/ListTimes";
+import { ListTimes } from "./components/Main/ListTimes";
 
 function App() {
   const [colaborators, setColaborators] = useState([]);

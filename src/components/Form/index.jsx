@@ -1,6 +1,6 @@
 import { styled } from "../../../stitches.config";
 import { Input } from "./Input";
-import { List } from "../List";
+import { List } from "./List";
 import style from "./style.css";
 import { useState } from "react";
 

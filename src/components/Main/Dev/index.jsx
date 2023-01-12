@@ -1,4 +1,4 @@
-import { styled } from "../../../stitches.config";
+import { styled } from "../../../../stitches.config";
 
 export function Dev({ name, image, office, secondColor }) {
   return (

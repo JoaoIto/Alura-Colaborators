@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 export function Input(props){
 
     const typing = (event) => {
@@ -9,7 +7,13 @@ export function Input(props){
     return(
         <div className="container">
             <label>{props.label}</label>
-            <input value={props.value} onChange={typing} required={props.required} type={props.type} placeholder={props.placeholder}/>
+            <input 
+            value={props.value} 
+            onChange={typing} 
+            required={props.required} 
+            type={props.type} 
+            placeholder={props.placeholder}
+            />
         </div>
     )
 }
