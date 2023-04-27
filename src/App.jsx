@@ -1,6 +1,3 @@
-import reset from "./reset.css";
-import style from "./style.css";
-
 import { useState } from "react";
 import { Header } from "./components/Header";
 import { Form } from "./components/Form";
