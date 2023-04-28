@@ -1,4 +1,3 @@
-import { styled } from "../../../../stitches.config";
 import { Dev } from "../Dev";
 
 export function Group(props) {
