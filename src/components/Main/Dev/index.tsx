@@ -1,6 +1,13 @@
-import { styled } from "../../../../stitches.config";
+import React from "react";
 
-export function Dev({ name, image, office, secondColor }) {
+interface DevProps {
+  name: string, 
+  img: string, 
+  office: string, 
+  secondColor: string
+}
+
+export function Dev({ name, img, office, secondColor }: DevProps) {
   return (
     <div
     className="
@@ -35,7 +42,7 @@ export function Dev({ name, image, office, secondColor }) {
         border-slate-300
         rounded-3
         "
-        src={image} alt={name} />
+        src={img} alt={name} />
       </div>
       <legend
       className="
