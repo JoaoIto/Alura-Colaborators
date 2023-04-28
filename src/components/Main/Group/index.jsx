@@ -3,13 +3,30 @@ import { Dev } from "../Dev";
 
 export function Group(props) {
   return (
-    <Section
+    <section
+    className="
+    w-screen
+    h-3/6
+    flex
+    flex-col
+    justify-around
+    items-center
+    m-6
+    "
       style={{
         backgroundColor: props.primaryColor,
         border: props.secondColor,
       }}
     >
-      <TitleCard>{props.name}</TitleCard>
+      <h3
+      className="
+      w-screen
+      text-3xl
+      font-inter
+      self-center
+      text-center
+      "
+      >{props.name}</h3>
       {props.colaborators.map((colaborator) => (
         <Dev
           key={colaborator.name}
@@ -18,25 +35,6 @@ export function Group(props) {
           secondColor={props.secondColor}
         />
       ))}
-    </Section>
+    </section>
   );
 }
-
-const Section = styled("section", {
-  width: "100vw",
-  height: "50vh",
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "space-around",
-  alignItems: "center",
-  margin: "20px 0",
-});
-
-const TitleCard = styled("h3", {
-  width: "100vw",
-  fontSize: "1.8rem",
-  fontFamily: "$Inter",
-  fontWeight: "500",
-  alignSelf: "center",
-  textAlign: "center",
-});
