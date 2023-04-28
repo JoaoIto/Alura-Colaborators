@@ -1,23 +1,28 @@
-import { styled } from "../../../stitches.config";
+import React from "react";
+import { IColaborator } from "../../shared/interfaces/Icolaborator";
 import { Input } from "./Input";
 import { List } from "./List";
-import style from "./style.css";
 import { useState } from "react";
 
-export function Form(props) {
+interface FormProps{
+  signInColaborator: (colaborator: IColaborator) => void,
+  times: string[]
+}
+
+export function Form({signInColaborator, times}: FormProps) {
 
   const [name, setName] = useState('');
   const [office, setOffice] = useState('');
   const [image, setImage] = useState('');
   const [group, setGroup] = useState('');
 
-  const onSave = (event) => {
+  const onSave = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    props.signInColaborator({
+    signInColaborator({
       name,
       office,
-      image,
       group,
+      img: ""
     });
 
     setName('');
@@ -28,8 +33,29 @@ export function Form(props) {
 
   return (
     <>
-      <Card>
-        <form onSubmit={onSave}>
+      <fieldset className="
+        h-5/6,
+        w-screen
+        flex
+        flex-col
+        items-center
+        justify-evenly
+        bg-aqua
+        border-5
+        border-solid
+        border-gray-700
+        rounded-lg
+      ">
+        <form 
+        className="
+          flex
+          flex-col
+          items-center
+          justify-evenly
+          h-800
+          w-full
+        "
+        onSubmit={onSave}>
           <Input
             type="text"
             label="Nome"
@@ -58,48 +84,33 @@ export function Form(props) {
 
           <List 
           label="Times" 
-          itens={props.times} 
+          itens={times} 
           required 
           value={group}
           onChanges={value => setGroup(value)}
           />
           
-          <Button>Criar Card</Button>
+          <button className="
+            h-20
+            w-3/5
+            flex
+            items-center
+            justify-center
+            p-6
+            rounded-10
+            bg-blue-400
+            text-white
+            m-6
+            rounded-lg
+            border-solid
+            border-2
+            border-slate-500
+            font-bold
+            text-2xl
+            font-inter
+          ">Criar Card</button>
         </form>
-      </Card>
+      </fieldset>
     </>
   );
 }
-
-const Card = styled("fieldset", {
-  height: "800px",
-  width: "80vw",
-  maxWidth: "1200px",
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "space-evenly",
-  backgroundColor: "$aquaWhite",
-  boxShadow: "8px 8px 15px rgba(0, 0, 0, 0.2)",
-  border: "5px solid rgba(0, 0, 0, 0.08)",
-  borderRadius: "10px",
-  margin: "30px auto",
-});
-
-const Button = styled("button", {
-    height: "60px",
-    width: "65%",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    padding: "20px",
-    borderRadius: "10px",
-    border: "none",
-    backgroundColor: "$blue400",
-    color: "#fff",
-    margin: "20px auto",
-    fontSize: "1.6rem",
-    fontWeight: "bold",
-    fontFamily: "$Inter",
-    textAlign: "center"
-})

@@ -15,9 +15,29 @@ export function Input({label, value, onChanges, required, type, placeholder}: In
   };
 
   return (
-    <div className="container">
-      <label>{label}</label>
+    <div className="
+    h-4/5
+    w-4/5
+    p-3
+    flex
+    flex-col
+    items-center
+    justify-evenly
+    ">
+      <label className="
+        text-3xl
+        font-inter
+      "      
+      >{label}</label>
       <input
+        className="
+          text-2xl
+          h-16
+          p-2
+          rounded-lg
+          w-4/5
+          border-none
+        "
         value={value}
         onChange={typing}
         required={required}

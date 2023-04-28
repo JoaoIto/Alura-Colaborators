@@ -1,15 +1,12 @@
 import React from "react";
+import {IColaborator} from "../../../shared/interfaces/Icolaborator"
 import { Dev } from "../Dev";
 
 interface GroupProps {
   primaryColor: string,
   secondColor: string,
   name: string, 
-  colaborators: {
-    name: string, 
-    img: string,
-    office: string
-  }[]
+  colaborators: {IColaborator: IColaborator}[]
 }
 
 export function Group({primaryColor, secondColor, name, colaborators}: GroupProps) {
@@ -40,10 +37,9 @@ export function Group({primaryColor, secondColor, name, colaborators}: GroupProp
       >{name}</h3>
       {colaborators.map((colaborator) => (
         <Dev
-          key={colaborator.name}
+          name={name} img={""} office={""} key={name}
           {...colaborator}
-          secondColor={secondColor}
-        />
+          secondColor={secondColor}        />
       ))}
     </section>
   );

@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         'blue-400': "#6278F7",
+        'aqua': "#ffffff91"
       },
       fontFamily: {
         inter: ['inter', 'sans-serif'],
