@@ -3,11 +3,13 @@ import { Header } from "./components/Header";
 import { Form } from "./components/Form";
 import { ListTimes } from "./components/Main/ListTimes";
 import './index.css'
+import { IColaborator } from "./shared/interfaces/Icolaborator";
+import React from "react";
 
 function App() {
-  const [colaborators, setColaborators] = useState([]);
+  const [colaborators, setColaborators] = useState<IColaborator[]>([]);
 
-  const newColaborator = (colaborator) => {
+  const newColaborator = (colaborator: IColaborator) => {
     console.log(colaborator);
     setColaborators([...colaborators, colaborator]);
   };
@@ -65,8 +67,8 @@ function App() {
         signInColaborator={(colaborator) => newColaborator(colaborator)}
       />
       <ListTimes 
-      colaborators={colaborators} 
-      times={times} />
+        colaborators={colaborators}
+        times={times}/>
     </div>
   );
 }

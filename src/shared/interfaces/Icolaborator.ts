@@ -3,4 +3,5 @@ export interface IColaborator {
     img: string,
     office: string,
     group?: string
+    IColaborator: IColaborator;
 }

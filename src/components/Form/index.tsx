@@ -22,7 +22,8 @@ export function Form({signInColaborator, times}: FormProps) {
       name,
       office,
       group,
-      img: ""
+      img: image,
+      IColaborator: []
     });
 
     setName('');
