@@ -2,49 +2,56 @@ import { styled } from "../../../../stitches.config";
 
 export function Dev({ name, image, office, secondColor }) {
   return (
-    <Devs>
-      <Background style={{ backgroundColor: secondColor }}>
-        <Icon src={image} alt={name} />
-      </Background>
-      <Name>{name}</Name>
-      <Office>{office}</Office>
-    </Devs>
+    <div
+    className="
+    flex
+    flex-col
+    items-center
+    justify-evenly
+    w-60
+    h-60
+    border-2
+    border-solid
+    border-slate-300
+    rounded-xl
+    bg-white
+    "
+    >
+      <div
+      className="
+      flex
+      items-center
+      justify-center
+      w-5/6
+      p-2
+      "
+      style={{ backgroundColor: secondColor }}>
+        <img
+        className="
+        h-40
+        w-40
+        border-2
+        border-solid
+        border-slate-300
+        rounded-3
+        "
+        src={image} alt={name} />
+      </div>
+      <legend
+      className="
+      text-center
+      text-3xl
+      font-bold
+      text-blue-400
+      "
+      >{name}</legend>
+      <span
+      className="
+      text-slate-700
+      text-xl
+      max-w-xs
+      "
+      >{office}</span>
+    </div>
   );
 }
-
-const Devs = styled("div", {
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "space-evenly",
-  width: "240px",
-  height: "250px",
-  borderRadius: "10px",
-  border: "4px solid #d3d3d3",
-  backgroundColor: "#fff",
-});
-
-const Background = styled("div", {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  width:  "90%",
-  padding: "10px"
-})
-const Icon = styled("img", {
-  height: "100px",
-  width: "100px",
-  border: "2px solid grey",
-  borderRadius: "50%",
-});
-
-const Name = styled("h4", {
-  textAlign: "center",
-  fontSize: "20px",
-  fontWeight: "bold",
-  color: "$blue400",
-});
-
-const Office = styled("span", {
-  maxWidth: "80%",
-});
