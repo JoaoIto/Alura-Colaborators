@@ -12,8 +12,8 @@ export function Header({srcImg, altImg} : HeaderProps) {
         src={srcImg}
         alt={altImg}
       />
-      <h1 className="text-5xl text-white font-inter">Pessoas e Times</h1>
-      <span className="text-4xl text-white font-popping">Organização de Devs em um só lugar!</span>
+      <h1 className="text-5xl font-bold text-white font-inter">Pessoas e Times</h1>
+      <span className="text-4xl font-bold text-white font-popping">Organização de Devs em um só lugar!</span>
     </div>
   );
 }

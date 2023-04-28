@@ -1,4 +1,12 @@
-export function Input(props){
+interface InputProps {
+    onChanges: (value: string) => void
+    placeholder: string, 
+    label: string, 
+    required: boolean, 
+    value: string
+}
+
+export function Input(props: InputProps){
 
     const typing = (event) => {
         props.onChanges(event.target.value)
