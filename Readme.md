@@ -2,7 +2,7 @@
 
 Projeto desenvolvido em guia pela Alura, num framework React, para se entender as fundamentos base do frame JS, e assim conseguir utilizálo em suas melhores funções. **Este projeto logo será passado para o *TypeScript* também!** 
 
-<img src="./public/print.png">
+<img src="./.github/public/print.png">
 
 ---
 

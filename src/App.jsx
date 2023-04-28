@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Header } from "./components/Header";
 import { Form } from "./components/Form";
 import { ListTimes } from "./components/Main/ListTimes";
+import './index.css'
 
 function App() {
   const [colaborators, setColaborators] = useState([]);
@@ -57,7 +58,8 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Header srcImg="../src/assets/img/logo.png"
+      altImg="logo da organo"/>
       <Form
         times={times.map((time) => time.name)}
         signInColaborator={(colaborator) => newColaborator(colaborator)}
