@@ -60,7 +60,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header srcImg="../src/assets/img/logo.png"
+      <Header srcImg="src\assets\img\logo.png"
       altImg="logo da organo"/>
       <Form
         times={times.map((time) => time.name)}
