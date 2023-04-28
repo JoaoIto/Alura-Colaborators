@@ -9,20 +9,20 @@ interface InputProps {
   placeholder: string;
 }
 
-export function Input(props: InputProps) {
+export function Input({label, value, onChanges, required, type, placeholder}: InputProps) {
   const typing = (event: React.ChangeEvent<HTMLInputElement>) => {
-    props.onChanges(event.target.value);
+    onChanges(event.target.value);
   };
 
   return (
     <div className="container">
-      <label>{props.label}</label>
+      <label>{label}</label>
       <input
-        value={props.value}
+        value={value}
         onChange={typing}
-        required={props.required}
-        type={props.type || "text"}
-        placeholder={props.placeholder}
+        required={required}
+        type={type || "text"}
+        placeholder={placeholder}
       />
     </div>
   );
