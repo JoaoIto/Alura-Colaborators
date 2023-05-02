@@ -15,6 +15,7 @@ export function Form({signInColaborator, times}: FormProps) {
   const [office, setOffice] = useState('');
   const [image, setImage] = useState('');
   const [group, setGroup] = useState('');
+  const [date, setDate] = useState('');
 
   const onSave = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -81,6 +82,14 @@ export function Form({signInColaborator, times}: FormProps) {
             placeholder="Coloque a url da sua foto: "
             value={image}
             onChanges={value => setImage(value)}
+          />
+
+          <Input
+          type="date"
+          label="Data"
+          placeholder=""
+          value={date}
+          onChanges={value => setDate(value)}
           />
 
           <List 
