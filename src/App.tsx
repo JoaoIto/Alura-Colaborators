@@ -60,7 +60,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header srcImg="https://github.com/JoaoIto/Alura-Colaborators/.github/public/logo.png?raw=true"
+      <Header srcImg="https://github.com/JoaoIto/Alura-Colaborators/blob/main/.github/public/logo.png?raw=true"
       altImg="logo da organo"/>
       <Form
         times={times.map((time) => time.name)}
