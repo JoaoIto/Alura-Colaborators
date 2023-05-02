@@ -4,12 +4,13 @@ import { Dev } from "../Dev";
 
 interface GroupProps {
   primaryColor: string;
-  secondColor: string
+  secondColor: string;
   name: string;
+  date: string
   colaborators: {IColaborator: IColaborator}[];
 }
 
-export function Group({primaryColor, secondColor, name, colaborators}: GroupProps) {
+export function Group({primaryColor, secondColor, name, colaborators, date}: GroupProps) {
   return (
     <section
     className="
@@ -37,7 +38,7 @@ export function Group({primaryColor, secondColor, name, colaborators}: GroupProp
       >{name}</h3>    
       {colaborators.map((colaborator) => (
         <Dev
-          name={name} img={""} office={""} key={name}
+          name={name} img={""} office={""} key={name} date={date}
           {...colaborator}
           secondColor={secondColor}        />
       ))}
