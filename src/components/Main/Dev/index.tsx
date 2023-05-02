@@ -1,13 +1,14 @@
 import React from "react";
 
 interface DevProps {
-  name: string, 
-  img: string, 
-  office: string, 
-  secondColor: string
+  name: string;
+  img: string;
+  office: string;
+  secondColor: string;
+  date: string;
 }
 
-export function Dev({ name, img, office, secondColor }: DevProps) {
+export function Dev({ name, img, office, secondColor, date }: DevProps) {
   return (
     <div
     className="
@@ -15,8 +16,8 @@ export function Dev({ name, img, office, secondColor }: DevProps) {
     flex-col
     items-center
     justify-evenly
-    w-60
-    h-60
+    w-80
+    h-80
     border-2
     border-solid
     border-slate-300
@@ -59,6 +60,14 @@ export function Dev({ name, img, office, secondColor }: DevProps) {
       max-w-xs
       "
       >{office}</span>
+
+      <span
+      className="
+      text-slate-700
+      text-xl
+      max-w-xs
+      "
+      >{new Date(date).toLocaleDateString()}</span>
     </div>
   );
 }

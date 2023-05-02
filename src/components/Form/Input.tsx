@@ -5,7 +5,7 @@ interface InputProps {
   value: string;
   onChanges: (value: string) => void;
   required?: boolean;
-  type: string;
+  type?: 'text' | 'password' | 'date' | 'email' | 'number';
   placeholder: string;
 }
 

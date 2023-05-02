@@ -24,6 +24,7 @@ export function Form({signInColaborator, times}: FormProps) {
       office,
       group,
       img: image,
+      date,
       IColaborator: []
     });
 
@@ -31,6 +32,7 @@ export function Form({signInColaborator, times}: FormProps) {
     setOffice('');
     setImage('');
     setGroup('');
+    setDate('');
   }
 
   return (

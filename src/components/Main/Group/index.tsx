@@ -3,10 +3,10 @@ import {IColaborator} from "../../../shared/interfaces/Icolaborator"
 import { Dev } from "../Dev";
 
 interface GroupProps {
-  primaryColor: string,
-  secondColor: string,
-  name: string, 
-  colaborators: {IColaborator: IColaborator}[]
+  primaryColor: string;
+  secondColor: string
+  name: string;
+  colaborators: {IColaborator: IColaborator}[];
 }
 
 export function Group({primaryColor, secondColor, name, colaborators}: GroupProps) {
@@ -34,7 +34,7 @@ export function Group({primaryColor, secondColor, name, colaborators}: GroupProp
       self-center
       text-center
       "
-      >{name}</h3>
+      >{name}</h3>    
       {colaborators.map((colaborator) => (
         <Dev
           name={name} img={""} office={""} key={name}
